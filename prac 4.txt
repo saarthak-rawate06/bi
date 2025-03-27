@@ -1,0 +1,18 @@
+prac 4
+
+Step 1. Open Excel sheet --> Enter data {Total Books(100) %Sold for Highest Price(60.00%) Highest [Unit profit(50)] Lowest[Unit Profit(20)]}
+
+In Excel, Click on the Data tab, in the Forecast group, click What-If Analysis & Scenario Manager
+
+. Add a Scenario by clicking on Add
+
+Type a name(60 percent), select cell $F$4 (% sold for the highest price) for the Changing cell and Click on OK
+
+Enter the corresponding value 0.6 and click on OK again
+
+Next, add 4 other scenarios (70%, 80%, 90% and 100%)
+Finally, your Scenario Manager should be consistent with the picture below.
+Same for 80-90-100 (0.8,0.9,1)
+
+
+Click on Summary
