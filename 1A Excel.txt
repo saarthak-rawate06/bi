@@ -1,0 +1,108 @@
+1A: Excel
+Open BI
+Blank report 
+Excel sheet 
+Open salary excel workbook
+Load 
+Apply change 
+Table view 
+Model view 
+---------------------------------------------------------------------------
+
+1B Odata:
+Open BI 
+Blank report 
+Get data> OData
+Url paste 
+Select Order 
+LOAD
+
+-------------------------------------------------------------------------
+2A ETL IN BI:
+blank report
+
+get data 
+
+odata feed
+
+http://services.odata.org/V3/Northwind/Northwind.svc/
+
+ok
+
+select products
+
+transform data
+
+copy products from left side and paste
+add this formula in text ribbon
+= Table.RemoveColumns(Products, {"SupplierID", "CategoryID", "ReorderLevel", "Discontinued", "Category", "Order_Details", "Supplier"})
+
+enter
+
+go to UnitsInStock column > right click > change type > whole number
+
+reload the orders table in bi by accessing the previous recent 
+
+resources
+
+select orders > transform data 
+
+scroll to Order_Details column in the right side 
+
+click on expand icon > untick select all columns > select productid, unitprice and quantity > ok
+
+come to bi > apply changes
+
+go to editor > add column > custom column > give column name(lines 
+total) > select orders_details.unitprice > insert > multiply * > select order_details.quantity > insert > ok
+
+go to bi again > model view > click manage relationships
+
+--------------------------------------------------------------
+
+2B ETL PROCESS IN SQL SERVER:
+
+2B
+Open SSMS> Connect> Database right click > Restore dB > 2 file of database > click on Device or .... options> add> here add 2 files > click Ok > Ok 
+
+
+In VS vommunity installer 
+
+Modify >extension development >sql Integration services (If not that install online make sure it is Microsoft)
+
+Create new project > Integration services Project > next > name > create>
+Solution explore right click > connection manager right click> new connection manager> OLEDB> Add> new> provider: MS OLE DB PROVIDER FOR SQL SERVER> Give Server name from > SSMS> >select or enter db name>AdventureWorks2012
+
+in all connection > data source> providers> OLEDB
+
+SSIS Toolbox > Dataflow drag drop(This is in Control flow)
+Data Flow > Other source (SSIS Toolbox)>drag drop OLEDB Source>
+
+Double click on OLE DB source → OLE DB Source Editor appears→ click on New to add connection manager. Select [Sales]. [Store] table from drop down→ ok
+
+. Drag OLE DB destination from Other Destination in data flow
+tab and connect both with the blue arrows
+
+
+------------------------------------------------------------------
+
+
+
+prac 4
+
+Step 1. Open Excel sheet --> Enter data {Total Books(100) %Sold for Highest Price(60.00%) Highest [Unit profit(50)] Lowest[Unit Profit(20)]}
+
+In Excel, Click on the Data tab, in the Forecast group, click What-If Analysis & Scenario Manager
+
+. Add a Scenario by clicking on Add
+
+Type a name(60 percent), select cell $F$4 (% sold for the highest price) for the Changing cell and Click on OK
+
+Enter the corresponding value 0.6 and click on OK again
+
+Next, add 4 other scenarios (70%, 80%, 90% and 100%)
+Finally, your Scenario Manager should be consistent with the picture below.
+Same for 80-90-100 (0.8,0.9,1)
+
+
+Click on Summary
